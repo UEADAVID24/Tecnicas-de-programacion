@@ -1,17 +1,23 @@
-class Vehiculo:
-    def __init__(self, marca, modelo, velocidad_maxima, capacidad):
-        self.marca = marca
-        self.modelo = modelo
-        self.velocidad_maxima = velocidad_maxima
-        self.capacidad = capacidad
+# Clase para un círculo
+class Circulo:
+    def __init__(self, radio):
+        self.radio = radio
 
-    def atributos(self):
-        print(self.marca, self.modelo, ":", sep=" ")
-        print("·Velocidad Máxima:", self.velocidad_maxima, "km/h")
-        print("·Capacidad:", self.capacidad, "personas")
+    def calcular_area(self):
+        return 3.14 * self.radio**2
 
-    def mover(self):
-        print(f"El {self.marca} {self.modelo} se está moviendo.")
+# Clase para un rectángulo
+class Rectangulo:
+    def __init__(self, ancho, alto):
+        self.ancho = ancho
+        self.alto = alto
 
-    def detener(self):
-        print(f"El {self.marca} {self.modelo} se ha detenido.")
+    def calcular_area(self):
+        return self.ancho * self.alto
+
+# Usar las clases y mostrar resultados
+circulo = Circulo(5)  # Radio 5
+rectangulo = Rectangulo(4, 6)  # Ancho 4, Alto 6
+
+print("Área del círculo:", circulo.calcular_area())
+print("Área del rectángulo:", rectangulo.calcular_area())
